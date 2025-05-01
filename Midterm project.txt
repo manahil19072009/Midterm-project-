@@ -1,0 +1,12 @@
+import time
+
+alarm_time = input("Enter the alarm time in HH:MM format: ")
+
+print("Alarm is set for", alarm_time)
+
+while True:
+    current_time = time.strftime("%H:%M")
+    if current_time == alarm_time:
+        print("Wake up! It's time!")
+        break
+    time.sleep(10)  # check every 10 seconds
